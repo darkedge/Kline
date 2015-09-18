@@ -1,0 +1,54 @@
+Alternative method of loading scenes (xml/yaml/json)
+(!) Transform: ability to find children
+(!) Texture manager
+Research DirectXMath library
+(...) Implement UTF-8 everywhere
+	- Annoying (use \x123 notation?)
+(...) Research dual quaternion transforms (Probably unnecessary)
+(...) Research optional translation, rotation, scale components for objects
+	- Uniform vs individual scale
+(...) Try LLVM/Clang instead of Visual C++
+ImGui does not support KP_ENTER
+(!!) Cannot create GameObjects from behaviors!
+(!) Cone and Capsule generation - https://gamedev.stackexchange.com/questions/56045/procedural-geometry-generation
+Nsight only supports frame debugging for D3D9, D3D11, and OpenGL 4.2.
+Make sure mipmaps are created for every texture
+(!) Find a way to do post-processing and other visual effects
+	- Implementation: Render order using enums
+	- http://answers.unity3d.com/questions/8220/rendering-order.html
+	- http://docs.unity3d.com/Manual/SL-SubshaderTags.html
+(!) Occlusion culling
+	- http://docs.unity3d.com/Manual/OcclusionCulling.html
+FMOD needs a way to access the main camera
+(!) Directory separators are mixed and hardcoded
+(?) Copy resource folder to TargetDir?
+Multiple scene support
+Prefab system for instancing GameObjects
+http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk/
+copydlls.bat: Order by platform first, then by configuration, save 2 lines
+http://www.gameprogrammingpatterns.com/
+(?) Make everything inherit from a general Object class? (Phyre, Unity)
+(!!) Fix memory management in GameObject::AddComponent
+(note) glm does zeromem initialization
+https://stackoverflow.com/questions/87304/calculating-frames-per-second-in-a-game
+https://en.wikibooks.org/wiki/OpenGL_Programming/Modern_OpenGL_Tutorial_Text_Rendering_01
+http://habibs.wordpress.com/category/lake-water-shader/
+SetConsoleTextAttribute for colored console output?
+Merge AGT6 back into Kline if possible (Changes Common.h: #include order, <CL/cl.hpp>, remove opengl include, rename macro's)
+
+// need to differentiate server->client messages from client->server (might be different meaning/size)
+Networked messages: Abstraction
+Read(); if (Legal) Handle();
+class InputMessage : Message {
+	uint8 id;
+	public int size;
+	struct Payload {...};
+	void Read();
+	bool IsMessageLegalInCurrentContext();
+	void HandleMessage();
+}
+packet.ReadMessage(Message *message); // Use size to read into payload?
+
+replace std::vector usage with the ArbitraryList one
+// Cool procedural noise
+http://www.neilblevins.com/cg_education/procedural_noise/procedural_noise.html
